@@ -31,7 +31,13 @@ const RecipieAdd = () => {
                 method: "POST",
                 body: JSON.stringify(jsonRecipie)
             })
-            .then(function (res) { console.log(res) })
+            .then(function (res) {
+                setTitle('')
+                setIngredients('')
+                setDirections('')
+                setFacts('')
+                setChef('')
+            })
             .catch(function (res) { console.log(res) })
     }
 

@@ -60,13 +60,13 @@ const RecipieDetail = () => {
 
                     <div className="recipie-detail-flex-container">
                         <div className="recipie-detail-heading">Facts</div>
-                        <div className="recipie-detail-fact">{details.facts}</div>
+                        <div className="recipie-detail-fact">{details.facts ? details.facts : "Not Available"}</div>
                     </div>
 
 
                     <div className="recipie-detail-flex-container">
                         <div className="recipie-detail-heading">Chef</div>
-                        <div className="recipie-detail-chef">{details.chef}</div>
+                        <div className="recipie-detail-chef">{details.chef ? details.chef : "Not Available"}</div>
                     </div>
 
 

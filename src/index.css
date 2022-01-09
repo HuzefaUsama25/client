@@ -13,7 +13,9 @@ body {
 
   min-height: 100vh;
   max-height: fit-content;
+
   width: 100vw;
+
   background-image: linear-gradient(45deg, #EA5C2B,#FF7F3F 20%,#F6D860 60%, #95CD41 95%);
   background-size: 600%;
   display: flex;

@@ -6,7 +6,7 @@ const RecipiePreview = ({ title, chef, id }) => {
         <Link to={`/recipie/${id}`}>
             <div className="recipie-block">
                 <h2 className="title">{title}</h2>
-                <h3 className="chef">{chef}</h3>
+                <h3 className="chef">{chef ? chef : "unknown"}</h3>
             </div>
         </Link>
     );
