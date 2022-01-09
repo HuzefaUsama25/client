@@ -14,7 +14,7 @@ const RecipieAdd = () => {
         e.preventDefault()
         const jsonRecipie = {
             "title": title,
-            "ingredients": ingredients.split(","),
+            "ingredients": ingredients.split("\n"),
             "directions": directions,
             "facts": facts,
             "chef": chef
@@ -49,7 +49,8 @@ const RecipieAdd = () => {
 
                 <div className="recipie-detail-flex-container">
                     <div className="recipie-detail-heading">Title</div>
-                    <input
+                    <textarea
+                        className="recipie-textarea"
                         name='title'
                         required
                         type='text'
@@ -60,7 +61,8 @@ const RecipieAdd = () => {
 
                 <div className="recipie-detail-flex-container">
                     <div className="recipie-detail-heading">Ingredients</div>
-                    <input
+                    <textarea
+                        className="recipie-textarea"
                         name='ingredients'
                         required
                         type='text'
@@ -71,7 +73,8 @@ const RecipieAdd = () => {
 
                 <div className="recipie-detail-flex-container">
                     <div className="recipie-detail-heading">Directions</div>
-                    <input
+                    <textarea
+                        className="recipie-textarea"
                         name='directions'
                         required
                         type='text'
@@ -82,7 +85,8 @@ const RecipieAdd = () => {
 
                 <div className="recipie-detail-flex-container">
                     <div className="recipie-detail-heading">Facts</div>
-                    <input
+                    <textarea
+                        className="recipie-textarea"
                         name='facts'
                         type='text'
                         value={facts}
@@ -92,7 +96,8 @@ const RecipieAdd = () => {
 
                 <div className="recipie-detail-flex-container">
                     <div className="recipie-detail-heading">Chef</div>
-                    <input
+                    <textarea
+                        className="recipie-textarea"
                         name='chef'
                         type='text'
                         value={chef}

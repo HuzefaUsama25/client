@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoadingPage from './components/LoadingPage';
 import RecipieAdd from './components/RecipieAdd';
 import RecipieDetail from './components/RecipieDetail';
-
 import RecipieList from './components/RecipieList';
 import RecipieSearch from './components/RecipieSearch';
 

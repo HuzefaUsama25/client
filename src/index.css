@@ -304,3 +304,15 @@ a {
   margin-left: 72vw;
   margin-top: 0vh;
 }
+
+.recipie-textarea {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  padding: 0.5em 1em;
+  margin: 0 5%;
+  font-size: 1.3em;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10em;
+  box-shadow: rgba(224, 164, 164, 0.657) 0 0 6px 3px;
+}
