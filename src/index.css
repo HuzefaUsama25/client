@@ -48,7 +48,7 @@ form.search-recipies > input[type=text] {
   padding: 0.5em 1em;
   margin: 0 5%;
   margin-top: 65%;
-  font-size: 1.3em;
+  font-size: 1.5em;
   background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 10em;
@@ -306,13 +306,43 @@ a {
 }
 
 .recipie-textarea {
-  grid-column-start: 1;
-  grid-column-end: 1;
+  line-height: 1.1em;
+  letter-spacing: -0.08em;
+  width: 65vw;
+  height: 3vh;
   padding: 0.5em 1em;
-  margin: 0 5%;
-  font-size: 1.3em;
+  margin: 0 0;
+  font-size: 1.8em;
   background-color: rgb(255, 255, 255);
   border: none;
-  border-radius: 10em;
-  box-shadow: rgba(224, 164, 164, 0.657) 0 0 6px 3px;
+  border-radius: 0.5em;
+  box-shadow: rgba(224, 164, 164, 0.657) 0 0 1px 3px;
+}
+
+
+textarea.ingredients {
+  height: 8vh;
+}
+
+textarea.directions {
+  height: 8vh;
+}
+
+textarea.facts {
+  height: 5vh;
+}
+
+.recipie-add-flex-container {
+  width: 75vw;
+  background-color: rgb(235, 235, 235);
+  font-size: 0.8em;
+  padding: 1.5em 2em;
+  margin: 1em 0em;
+  border-radius: 1.5em;
+  box-shadow: 0 0 8px 0 black;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
 }

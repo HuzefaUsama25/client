@@ -47,10 +47,10 @@ const RecipieAdd = () => {
 
             <form autoComplete="off" className="form-add-recipie" onSubmit={handleSubmit}>
 
-                <div className="recipie-detail-flex-container">
+                <div className="recipie-add-flex-container">
                     <div className="recipie-detail-heading">Title</div>
                     <textarea
-                        className="recipie-textarea"
+                        className="recipie-textarea title"
                         name='title'
                         required
                         type='text'
@@ -59,10 +59,10 @@ const RecipieAdd = () => {
                     />
                 </div>
 
-                <div className="recipie-detail-flex-container">
+                <div className="recipie-add-flex-container">
                     <div className="recipie-detail-heading">Ingredients</div>
                     <textarea
-                        className="recipie-textarea"
+                        className="recipie-textarea ingredients"
                         name='ingredients'
                         required
                         type='text'
@@ -71,10 +71,10 @@ const RecipieAdd = () => {
                     />
                 </div>
 
-                <div className="recipie-detail-flex-container">
+                <div className="recipie-add-flex-container">
                     <div className="recipie-detail-heading">Directions</div>
                     <textarea
-                        className="recipie-textarea"
+                        className="recipie-textarea directions"
                         name='directions'
                         required
                         type='text'
@@ -83,10 +83,10 @@ const RecipieAdd = () => {
                     />
                 </div>
 
-                <div className="recipie-detail-flex-container">
+                <div className="recipie-add-flex-container">
                     <div className="recipie-detail-heading">Facts</div>
                     <textarea
-                        className="recipie-textarea"
+                        className="recipie-textarea facts"
                         name='facts'
                         type='text'
                         value={facts}
@@ -94,10 +94,10 @@ const RecipieAdd = () => {
                     />
                 </div>
 
-                <div className="recipie-detail-flex-container">
+                <div className="recipie-add-flex-container">
                     <div className="recipie-detail-heading">Chef</div>
                     <textarea
-                        className="recipie-textarea"
+                        className="recipie-textarea chef"
                         name='chef'
                         type='text'
                         value={chef}
@@ -108,51 +108,9 @@ const RecipieAdd = () => {
                 <input type="submit" value="Submit" />
             </form>
 
-
-
         </div>
-
     );
 }
 
 export default RecipieAdd;
-
-
-/*
-title: {
-    type: String,
-        required: true
-},
-ingredients: {
-    type: Array,
-        required: true
-},
-directions: {
-    type: String,
-        required: true
-},
-facts: {
-    type: String
-},
-chef: {
-    type: String
-},
-updated_date: {
-    type: Date,
-    default: Date.now
-}
-
-
-
-
-
-{
-  "title": "Russian Salad",
-  "ingredients": ["Potatoes 2", "Carrots 2", "Apple 1", "Walnut 50 gm", "Raisin 50 gm", "Mayonnaise ½ cup", "Black pepper 1/4 tsp", "Salt to taste", "Cream 4 tsp"],
-  "directions": "Boil potatoes and carrots. Cut apple, potato and carrot into cubes. Combine boiled carrot, boiled potatoes, apple, walnut, raisin, black pepper, cream in a bowl and mix well. Serve the delicious Russian salad with grilled chicken and zeera pulao. To serve, garnish with lettuce leaf, sliced cucumber and long slices of carrot.",
-  "facts": "very tasty",
-  "chef": "zakir"
-}
-
-*/
 
