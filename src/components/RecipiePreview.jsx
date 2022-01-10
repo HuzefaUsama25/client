@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 const RecipiePreview = ({ title, chef, id }) => {
 
+
+
     return (
         <Link to={`/recipie/${id}`}>
             <div className="recipie-block">

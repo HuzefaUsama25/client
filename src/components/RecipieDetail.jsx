@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import LoadingPage from "./LoadingPage";
+import RecipieAdd from "./RecipieAdd";
 
 const RecipieDetail = () => {
     const { id } = useParams()
@@ -24,6 +25,31 @@ const RecipieDetail = () => {
     }, [])
 
 
+
+    const handleDelete = () => {
+        fetch(`http://localhost:8082/api/recipies/id/${id}`,
+            {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "DELETE",
+            })
+    }
+
+    const handleUpdate = () => {
+        fetch("http://localhost:8082/api/recipies",
+            {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "UPDATE",
+                body: JSON.stringify(details)
+            })
+    }
+
+
     return (
         <>
             {isPending && <LoadingPage />}
@@ -33,7 +59,8 @@ const RecipieDetail = () => {
                     <div className="flex-container-result">
                         <Link to="/"><div className='go-back'> &#x2190;</div></Link>
                         <h1 className='title-h1'>{details.title}</h1>
-
+                        <Link to="/"><button onClick={handleDelete}>D</button></Link>
+                        <Link to={`/recipie/${id}`}><button onClick={handleUpdate}>U</button></Link>
                     </div>
 
 
