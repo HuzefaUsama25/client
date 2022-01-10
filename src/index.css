@@ -137,7 +137,11 @@ a {
 }
 
 
-
+.fa-trash {
+  font-size: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
+}
 
 
 .results-page {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const RecipieAdd = () => {
+const RecipieAdd = (props) => {
 
     const [title, setTitle] = useState('')
     const [ingredients, setIngredients] = useState('')
@@ -22,7 +22,7 @@ const RecipieAdd = () => {
 
         console.log(jsonRecipie)
 
-        fetch("http://localhost:8082/api/recipies",
+        fetch("https://recipie-app-api.herokuapp.com/api/recipies",
             {
                 headers: {
                     'Accept': 'application/json',

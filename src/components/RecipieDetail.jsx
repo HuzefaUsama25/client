@@ -9,9 +9,10 @@ const RecipieDetail = () => {
     const [details, setDetails] = useState({})
     const [isPending, setIsPending] = useState(true)
 
+
     useEffect(() => {
         console.log("use effect ran")
-        fetch(`http://localhost:8082/api/recipies/id/${id}`)
+        fetch(`https://recipie-app-api.herokuapp.com/api/recipies/id/${id}`)
             .then((res) => {
                 return res.json()
             })
@@ -27,7 +28,7 @@ const RecipieDetail = () => {
 
 
     const handleDelete = () => {
-        fetch(`http://localhost:8082/api/recipies/id/${id}`,
+        fetch(`https://recipie-app-api.herokuapp.com/api/recipies/id/${id}`,
             {
                 headers: {
                     'Accept': 'application/json',
@@ -37,17 +38,7 @@ const RecipieDetail = () => {
             })
     }
 
-    const handleUpdate = () => {
-        fetch("http://localhost:8082/api/recipies",
-            {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                method: "UPDATE",
-                body: JSON.stringify(details)
-            })
-    }
+
 
 
     return (
@@ -59,8 +50,7 @@ const RecipieDetail = () => {
                     <div className="flex-container-result">
                         <Link to="/"><div className='go-back'> &#x2190;</div></Link>
                         <h1 className='title-h1'>{details.title}</h1>
-                        <Link to="/"><button onClick={handleDelete}>D</button></Link>
-                        <Link to={`/recipie/${id}`}><button onClick={handleUpdate}>U</button></Link>
+                        <Link to="/"><button onClick={handleDelete} className="fa fa-trash"></button></Link>
                     </div>
 
 

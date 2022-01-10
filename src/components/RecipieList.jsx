@@ -12,7 +12,7 @@ export default function RecipieList() {
 
     useEffect(() => {
         console.log("use effect ran")
-        fetch(`http://localhost:8082/api/recipies/q=${title}`)
+        fetch(`https://recipie-app-api.herokuapp.com/api/recipies/q=${title}`)
             .then((res) => {
                 return res.json()
             })
